@@ -8,6 +8,16 @@
     behaviors {
       #include "macros.dtsi"
 
+      tdQ: tap_dance_0 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_0";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        quick_tap_ms = <175>;
+        flavor = "tap-preferred";
+        bindings = <&kp Q>, <&kp QMARK>;
+      }; 
+
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
