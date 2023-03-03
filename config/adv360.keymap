@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
-# trigger build
+# trigger build action
 / {
     behaviors {
       #include "macros.dtsi"
