@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/backlight.h>
 
 &mt {
-    tapping-term-ms = <800>;
+    tapping-term-ms = <1000>;
 };
 
 / {
@@ -18,16 +18,6 @@
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp Q>, <&kp QMARK>;
-      }; 
-
-      hm: homerow_mods {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
       };
     };
 
