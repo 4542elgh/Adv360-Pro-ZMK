@@ -55,7 +55,7 @@
         &kp TAB   &tdQ      &kp W    &kp F    &kp P  &kp B    &none                                                                        &none &kp J  &kp L  &kp U     &kp Y    &kp SEMI &kp BSLH
         &kp ESC   &kp A     &kp R    &mt LSHIFT S    &mt LCTRL T  &lt 1 G  &none    &kp LCTRL   &kp LALT             &kp LGUI  &kp RCTRL           &none &kp M  &mt LCTRL N  &mt LSHIFT E  &kp I    &kp O    &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp D  &kp V    &none    &none       &kp HOME &none &none &kp PG_UP &none     &none      &kp K  &kp H  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp ENTER &lt 2 ESC  &kp END             &kp PG_DN &kp SPACE &kp BSPC  &kp LCTRL &kp LSHIFT  &kp LBKT &kp RBKT &mo 2
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp ENTER &lt 2 ESC  &kp END             &kp PG_DN &lt 3 SPACE &kp BSPC  &kp LCTRL &kp LSHIFT  &kp LBKT &kp RBKT &mo 2
       >;
     };
     keypad {
