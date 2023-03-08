@@ -78,11 +78,11 @@
     };
     mod {
        bindings = <
-        &trans &trans    &trans &trans    &trans    &trans &trans                                                       &trans &trans &trans   &trans    &trans &trans &trans
-        &trans &kp QMARK &trans &trans    &tdPRCNT  &trans &trans                                                       &trans &trans &trans   &kp UNDER &trans &trans &trans
-        &trans &tdAT     &trans &trans    &kp GRAVE &trans &trans        &trans &trans             &trans &trans        &trans &trans &trans   &tdEXCL   &trans &trans &trans
-        &trans &trans    &trans &kp CARET &kp DLLR  &trans        &none  &none  &trans &none &none &trans &none  &none         &trans &kp HASH &trans    &trans &trans &trans
-        &trans &trans    &trans &trans    &trans                  &trans &trans &trans             &trans &trans &trans               &trans   &trans    &trans &trans &trans
+        &trans &trans    &trans &trans    &trans    &trans &trans                                                       &trans      &trans &trans   &trans    &trans &trans &trans
+        &trans &kp QMARK &trans &trans    &tdPRCNT  &trans &trans                                                       &bootloader &trans &trans   &kp UNDER &trans &trans &trans
+        &trans &tdAT     &trans &trans    &kp GRAVE &trans &trans        &trans &trans             &trans &trans        &trans      &trans &trans   &tdEXCL   &trans &trans &trans
+        &trans &trans    &trans &kp CARET &kp DLLR  &trans        &none  &none  &trans &none &none &trans &none  &none              &trans &kp HASH &trans    &trans &trans &trans
+        &trans &trans    &trans &trans    &trans                  &trans &trans &trans             &trans &trans &trans                    &trans   &trans    &trans &trans &trans
       >;
     };
   };
