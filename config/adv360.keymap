@@ -32,6 +32,30 @@
             tapping-term-ms = <200>;
             bindings = <&kp PRCNT>, <&kp PIPE>;
         };
+
+        tdPAR: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+
+        tdBRC: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_5";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+        };
+
+        tdBKT: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_6";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+        };
     };
 
     keymap {
@@ -99,20 +123,20 @@
         // ,-----------------------------------------.                                  ,-----------------------------------------.
         // |     |     |     |     |     |     |     |                                  |     |     |     |     |     |     |     |
         // |-----+-----+-----+-----+-----+-----+-----|                                  |-----+-----+-----+-----+-----+-----+-----|
-        // |     |  ?  |     |  /  | % | |  \  |BOOTL|                                  |BOOTL|     |     |  _  |     |     |     |
+        // |     |  ?  |     |  /  | % | |  \  |BOOTL|                                  |BOOTL| [/] |     |  _  |     |     |     |
         // |-----+-----+-----+-----+-----+-----+-----| ,-----------.      ,-----------. |-----+-----+-----+-----+-----+-----+-----|
-        // |     | @*& |     |  `  |     |     |BTNXT| |     |     |      |     |     | |     |     |     | !/= |     |     |     |
+        // |     | @*& |     |  `  |     |     |BTNXT| |     |     |      |     |     | |     | {/} |     | !/= |     |     |     |
         // |-----+-----+-----+-----+-----+-----+-----' `-----+-----|      |-----+-----' `-----+-----+-----+-----+-----+-----+-----|
-        // |     |     |  ^  |  $  |     |     |             |     |      |     |             |     |  #  |     |     |     |     |
+        // |     |     |  ^  |  $  |     |     |             |     |      |     |             | (/) |  #  |     |     |     |     |
         // |-----+-----+-----+-----+-----+-----' ,-----------+-----|      |-----+-----------. `-----+-----+-----+-----+-----+-----|
         // |     |     |     |     |     |       |     |     |     |      |     |     |     |       |     |     |     |     |     |
         // `-----------------------------'       `-----------------'      `-----------------'       `-----------------------------'
         mod {
             bindings = <
                 &trans &trans    &trans &trans    &trans    &trans   &trans                                                              &trans      &trans &trans   &trans    &trans &trans &trans
-                &trans &kp QMARK &trans &kp FSLH  &tdPRCNT  &kp BSLH &bootloader                                                         &bootloader &trans &trans   &kp UNDER &trans &trans &trans
-                &trans &tdAT     &trans &trans    &kp GRAVE &trans   &bt BT_NXT         &trans &trans               &trans &trans        &trans      &trans &trans   &tdEXCL   &trans &trans &trans
-                &trans &trans    &trans &kp CARET &kp DLLR  &trans               &trans &trans &trans &trans &trans &trans &trans &trans             &trans &kp HASH &trans    &trans &trans &trans
+                &trans &kp QMARK &trans &kp FSLH  &tdPRCNT  &kp BSLH &bootloader                                                         &bootloader &tdBKT &trans   &kp UNDER &trans &trans &trans
+                &trans &tdAT     &trans &trans    &kp GRAVE &trans   &bt BT_NXT         &trans &trans               &trans &trans        &trans      &tdBRC &trans   &tdEXCL   &trans &trans &trans
+                &trans &trans    &trans &kp CARET &kp DLLR  &trans               &trans &trans &trans &trans &trans &trans &trans &trans             &tdPAR &kp HASH &trans    &trans &trans &trans
                 &trans &trans    &trans &trans    &trans                         &trans &trans &trans               &trans &trans &trans                    &trans   &trans    &trans &trans &trans
             >;
         };
