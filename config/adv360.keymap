@@ -56,6 +56,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
+
+        tdQUOTE: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_7";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+        };
     };
 
     keymap {
@@ -97,7 +105,7 @@
                 &trans &trans &trans &trans &trans &trans &trans                                                         &trans &kp N7 &kp N8 &kp N9 &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans        &trans &trans               &trans &trans        &trans &kp N4 &kp N5 &kp N6 &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans        &kp N1 &kp N2 &kp N3 &trans &trans &trans
-                &trans &trans &trans &trans &trans               &trans &trans &trans               &trans &trans &trans               &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans               &trans &trans &trans               &trans &kp N0 &kp N0               &trans &trans &trans &trans &trans
             >;
         };
         // ,-----------------------------------------.                                  ,-----------------------------------------.
@@ -125,7 +133,7 @@
         // |-----+-----+-----+-----+-----+-----+-----|                                  |-----+-----+-----+-----+-----+-----+-----|
         // |     |  ?  |     |  /  | % | |  \  |BOOTL|                                  |BOOTL| [/] |     |  _  |     |     |     |
         // |-----+-----+-----+-----+-----+-----+-----| ,-----------.      ,-----------. |-----+-----+-----+-----+-----+-----+-----|
-        // |     | @*& |     |  `  |     |     |BTNXT| |     |     |      |     |     | |     | {/} |     | !/= |     |     |     |
+        // |     | @*& |     |  `  |     |     |BTNXT| |     |     |      |     |     | |     | {/} |     | !/= |     | '/" |     |
         // |-----+-----+-----+-----+-----+-----+-----' `-----+-----|      |-----+-----' `-----+-----+-----+-----+-----+-----+-----|
         // |     |     |  ^  |  $  |     |     |             |     |      |     |             | (/) |  #  |     |     |     |     |
         // |-----+-----+-----+-----+-----+-----' ,-----------+-----|      |-----+-----------. `-----+-----+-----+-----+-----+-----|
@@ -133,11 +141,11 @@
         // `-----------------------------'       `-----------------'      `-----------------'       `-----------------------------'
         mod {
             bindings = <
-                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                                              &trans      &trans &trans   &trans    &trans &trans &trans
-                &trans &kp QMARK    &trans       &kp FSLH     &tdPRCNT     &kp BSLH     &bootloader                                                         &bootloader &tdBKT &trans   &kp UNDER &trans &trans &trans
-                &trans &tdAT        &trans       &trans       &kp GRAVE    &trans       &bt BT_NXT         &trans &trans               &trans &trans        &trans      &tdBRC &trans   &tdEXCL   &trans &trans &trans
-                &trans &trans       &trans       &kp CARET    &kp DLLR     &trans                   &trans &trans &trans &trans &trans &trans &trans &trans             &tdPAR &kp HASH &trans    &trans &trans &trans
-                &trans &trans       &trans       &trans       &trans                                &trans &trans &trans               &trans &trans &trans                    &trans   &trans    &trans &trans &trans
+                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                                              &trans      &trans &trans   &trans    &trans &trans   &trans
+                &trans &kp QMARK    &trans       &kp FSLH     &tdPRCNT     &kp BSLH     &bootloader                                                         &bootloader &tdBKT &trans   &kp UNDER &trans &trans   &trans
+                &trans &tdAT        &trans       &trans       &kp GRAVE    &trans       &bt BT_NXT         &trans &trans               &trans &trans        &trans      &tdBRC &trans   &tdEXCL   &trans &tdQUOTE &trans
+                &trans &trans       &trans       &kp CARET    &kp DLLR     &trans                   &trans &trans &trans &trans &trans &trans &trans &trans             &tdPAR &kp HASH &trans    &trans &trans   &trans
+                &trans &trans       &trans       &trans       &trans                                &trans &trans &trans               &trans &trans &trans                    &trans   &trans    &trans &trans   &trans
             >;
         };
     };
