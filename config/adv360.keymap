@@ -121,7 +121,7 @@
             >;
         };
         // ,-----------------------------------------.                                  ,-----------------------------------------.
-        // |     |     |     |     |     |     |     |                                  |     |     |     |     |     |     |     |
+        // |     | BT1 | BT2 | BT3 | BT4 | BT5 |     |                                  |     |     |     |     |     |     |     |
         // |-----+-----+-----+-----+-----+-----+-----|                                  |-----+-----+-----+-----+-----+-----+-----|
         // |     |  ?  |     |  /  | % | |  \  |BOOTL|                                  |BOOTL| [/] |     |  _  |     |     |     |
         // |-----+-----+-----+-----+-----+-----+-----| ,-----------.      ,-----------. |-----+-----+-----+-----+-----+-----+-----|
@@ -133,11 +133,11 @@
         // `-----------------------------'       `-----------------'      `-----------------'       `-----------------------------'
         mod {
             bindings = <
-                &trans &trans    &trans &trans    &trans    &trans   &trans                                                              &trans      &trans &trans   &trans    &trans &trans &trans
-                &trans &kp QMARK &trans &kp FSLH  &tdPRCNT  &kp BSLH &bootloader                                                         &bootloader &tdBKT &trans   &kp UNDER &trans &trans &trans
-                &trans &tdAT     &trans &trans    &kp GRAVE &trans   &bt BT_NXT         &trans &trans               &trans &trans        &trans      &tdBRC &trans   &tdEXCL   &trans &trans &trans
-                &trans &trans    &trans &kp CARET &kp DLLR  &trans               &trans &trans &trans &trans &trans &trans &trans &trans             &tdPAR &kp HASH &trans    &trans &trans &trans
-                &trans &trans    &trans &trans    &trans                         &trans &trans &trans               &trans &trans &trans                    &trans   &trans    &trans &trans &trans
+                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                                              &trans      &trans &trans   &trans    &trans &trans &trans
+                &trans &kp QMARK    &trans       &kp FSLH     &tdPRCNT     &kp BSLH     &bootloader                                                         &bootloader &tdBKT &trans   &kp UNDER &trans &trans &trans
+                &trans &tdAT        &trans       &trans       &kp GRAVE    &trans       &bt BT_NXT         &trans &trans               &trans &trans        &trans      &tdBRC &trans   &tdEXCL   &trans &trans &trans
+                &trans &trans       &trans       &kp CARET    &kp DLLR     &trans                   &trans &trans &trans &trans &trans &trans &trans &trans             &tdPAR &kp HASH &trans    &trans &trans &trans
+                &trans &trans       &trans       &trans       &trans                                &trans &trans &trans               &trans &trans &trans                    &trans   &trans    &trans &trans &trans
             >;
         };
     };
